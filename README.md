@@ -30,10 +30,12 @@ resource "kubernetes_role" "accessRole" {
 }
 
 resource "kubernetes_role_binding_v1" "example" {
-        metadata {
+       
+         metadata {
             name      = "accessRole-binding"
             namespace = "test1"
         }
+        
         role_ref {
             api_group = "rbac.authorization.k8s.io"
             kind      = "Role"
