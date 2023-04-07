@@ -1,0 +1,8 @@
+
+spring:
+  cloud:
+    kubernetes:
+      leader:
+        config-map-name: leader-config-map
+        enabled: true
+        namespace: test1
